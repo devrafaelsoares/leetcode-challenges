@@ -1,0 +1,12 @@
+{
+  "name": "leetcode-challenges",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:devrafaelsoares/leetcode-challenges.git",
+  "author": "devrafaelsoares <rafael.soares.developer@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.8",
+    "typescript": "^5.3.3"
+  }
+}
