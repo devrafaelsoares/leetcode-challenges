@@ -2,13 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Leetcode Challenges",
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/**/*.ts",
-            "runtimeArgs": ["node -r", "ts-node/register", "-r", "tsconfig-paths/register"],
-            "outFiles": ["${workspaceFolder}/**/*.js"]
+            "runtimeExecutable": "~/.nvm/versions/node/v20.9.0/bin/node",
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
+
+            "args": ["${file}"],
+
+            "cwd": "${workspaceRoot}",
+            "internalConsoleOptions": "openOnSessionStart",
+            "skipFiles": ["<node_internals>/**", "node_modules/**"]
         }
     ]
 }
