@@ -6,11 +6,11 @@ type LicenseKeyFormatting = {
     k: number;
 };
 
-interface LicenseKeyFormattinCase extends Case {
+interface LicenseKeyFormattingCase extends Case {
     input: LicenseKeyFormatting;
 }
 
-const cases: LicenseKeyFormattinCase[] = [
+const cases: LicenseKeyFormattingCase[] = [
     {
         id: 1,
         description: 'should return 5F3Z-2E9W when entering 5F3Z-2e-9-w with the group of 4 caracteres',
@@ -26,7 +26,7 @@ const cases: LicenseKeyFormattinCase[] = [
 ];
 
 describe('License Key Fornatting', () => {
-    it.each<LicenseKeyFormattinCase>(cases)('Case: #$id - Description: $description', ({ input, output }) => {
+    it.each<LicenseKeyFormattingCase>(cases)('Case: #$id - Description: $description', ({ input, output }) => {
         expect(licenseKeyFormatting(input.s, input.k)).toBe(output);
     });
 });
