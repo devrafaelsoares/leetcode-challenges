@@ -12,7 +12,7 @@ const cases: Case[] = [
         id: 2,
         description: 'should return "false" when entering textbook',
         input: 'textbook',
-        output: true,
+        output: false,
     },
 ];
 
