@@ -1,7 +1,7 @@
 import { Case } from '../types/case';
 import { romanToInt } from './index';
 
-const cases: Case[] = [
+const cases: Case<string>[] = [
     {
         id: 1,
         description: 'should return 3 when entering III',
@@ -23,7 +23,7 @@ const cases: Case[] = [
 ];
 
 describe('Roman numerals for integers', () => {
-    it.each<Case>(cases)('Case: $id - $description', ({ input, output }) => {
+    it.each<Case<string>>(cases)('Case: $id - $description', ({ input, output }) => {
         expect(romanToInt(input)).toEqual(output);
     });
 });

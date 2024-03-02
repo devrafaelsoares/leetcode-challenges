@@ -1,7 +1,7 @@
 import { lengthOfLastWord } from '.';
 import { Case } from '../types/case';
 
-const cases: Case[] = [
+const cases: Case<string>[] = [
     {
         id: 1,
         description: 'It must return the size of 5 characters informing the string "Hello World"',
@@ -23,7 +23,7 @@ const cases: Case[] = [
 ];
 
 describe('Length of last word', () => {
-    it.each<Case>(cases)('Case: $id - $description', ({ input, output }) => {
+    it.each<Case<string>>(cases)('Case: $id - $description', ({ input, output }) => {
         expect(lengthOfLastWord(input)).toEqual(output);
     });
 });

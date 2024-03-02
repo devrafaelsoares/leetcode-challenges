@@ -7,7 +7,7 @@ type CountItemsMatchingRule = {
     ruleValue: string;
 };
 
-interface CountItemsMatchingRuleCase extends Case {
+interface CountItemsMatchingRuleCase extends Case<CountItemsMatchingRule> {
     input: CountItemsMatchingRule;
 }
 

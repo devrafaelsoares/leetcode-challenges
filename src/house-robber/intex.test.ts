@@ -1,7 +1,7 @@
 import { rob } from '.';
 import { Case } from '../types/case';
 
-const cases: Case[] = [
+const cases: Case<Array<number>>[] = [
     {
         id: 1,
         description: 'It must return 4 when entering the vector [1, 2, 3, 1]',
@@ -17,7 +17,7 @@ const cases: Case[] = [
 ];
 
 describe('House robber', () => {
-    it.each<Case>(cases)('Case: $id - $description', ({ input, output }) => {
+    it.each<Case<Array<number>>>(cases)('Case: $id - $description', ({ input, output }) => {
         expect(rob(input)).toEqual(output);
     });
 });

@@ -6,7 +6,7 @@ type LicenseKeyFormatting = {
     k: number;
 };
 
-interface LicenseKeyFormattingCase extends Case {
+interface LicenseKeyFormattingCase extends Case<LicenseKeyFormatting> {
     input: LicenseKeyFormatting;
 }
 

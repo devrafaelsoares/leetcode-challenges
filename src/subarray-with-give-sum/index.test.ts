@@ -6,11 +6,11 @@ type SubarrayWithGiveSum = {
     sum: number;
 };
 
-interface SubarrayWithGiveSumCase extends Case {
+interface SubarrayWithGiveSumCase extends Case<SubarrayWithGiveSum> {
     input: SubarrayWithGiveSum;
 }
 
-const cases: Case[] = [
+const cases: Case<SubarrayWithGiveSum>[] = [
     {
         id: 1,
         description:
@@ -44,6 +44,6 @@ const cases: Case[] = [
 
 describe('Subarray with give sum', () => {
     it.each<SubarrayWithGiveSumCase>(cases)('Case: $id - $description', ({ input: { array, sum }, output }) => {
-        expect(subArrayGiveSum(array, sum)).toBe(output);
+        expect(subArrayGiveSum(array, sum)).toEqual(output);
     });
 });

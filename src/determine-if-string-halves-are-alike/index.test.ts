@@ -1,7 +1,7 @@
 import { halvesAreAlike } from '.';
 import { Case } from '../types/case';
 
-const cases: Case[] = [
+const cases: Case<string>[] = [
     {
         id: 1,
         description: 'should return "true" when entering book',
@@ -17,7 +17,7 @@ const cases: Case[] = [
 ];
 
 describe('Determine if string halves are alike', () => {
-    it.each<Case>(cases)('Case: #$id - Description: $description', ({ input, output }) => {
+    it.each<Case<string>>(cases)('Case: #$id - Description: $description', ({ input, output }) => {
         expect(halvesAreAlike(input)).toBe(output);
     });
 });

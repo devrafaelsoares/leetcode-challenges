@@ -1,7 +1,7 @@
 import { findComplement } from '.';
 import { Case } from '../types/case';
 
-const cases: Case[] = [
+const cases: Case<number>[] = [
     {
         id: 1,
         description: 'should return 2 when entering 5',
@@ -35,7 +35,7 @@ const cases: Case[] = [
 ];
 
 describe('Number Complement', () => {
-    it.each<Case>(cases)('Case: $id - Description: $description', ({ input, output }) => {
+    it.each<Case<number>>(cases)('Case: $id - Description: $description', ({ input, output }) => {
         expect(findComplement(input)).toEqual(output);
     });
 });
