@@ -1,6 +1,6 @@
-export type Case = {
+export type Case<T> = {
     id: number;
     description: string;
-    input: any;
+    input: T;
     output: any;
 };
